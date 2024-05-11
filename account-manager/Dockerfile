@@ -13,6 +13,9 @@ RUN npm install
 # Copy rest of the application
 COPY . .
 
+# Run prisma generate
+RUN cd account-manager && prisma generate
+
 # Expose port
 EXPOSE 3000
 
