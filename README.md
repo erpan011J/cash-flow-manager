@@ -56,7 +56,9 @@ docker-compose up -d --build
 
 ## API Documentation
 
-### <a name="_ji2na6is5znm"></a>**Authentication**
+##### URL for local developement: http://localhost:3000/
+
+## <a name="_ji2na6is5znm"></a>**Authentication**
 #### <a name="_oqfl89b3uraa"></a>**1. Signup**
 - **Method:** POST
 - **URL:** /signup

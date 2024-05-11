@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Set working directory
-WORKDIR /app
+WORKDIR /account-manager
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
@@ -10,11 +10,14 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Copy rest of the application
+# Copy the rest of the application
 COPY . .
 
-# Run prisma generate
-RUN cd account-manager && prisma generate
+# Install prisma globally
+RUN npm install -g prisma
+
+# Generate Prisma client
+RUN prisma generate
 
 # Expose port
 EXPOSE 3000
