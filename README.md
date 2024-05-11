@@ -4,7 +4,7 @@ This is a backend service application for managing user accounts and transaction
 
 ## Features
 
-- User authentication with third-party services (Supabase, Supertokens, etc.).
+- User authentication with third-party services (Supabase, etc.).
 - Management of payment accounts including credit, debit, and loan accounts.
 - Recording and management of payment transactions.
 - API endpoints for sending and withdrawing funds.
