@@ -1,0 +1,19 @@
+{
+  "name": "account-manager",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^5.13.0",
+    "@supabase/supabase-js": "^2.43.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0",
+    "prisma": "^5.13.0"
+  }
+}

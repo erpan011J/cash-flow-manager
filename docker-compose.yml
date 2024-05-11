@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  account-manager:
+    build:
+      context: ./account-manager
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

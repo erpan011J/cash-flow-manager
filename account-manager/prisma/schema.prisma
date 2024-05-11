@@ -1,0 +1,40 @@
+generator client {
+  provider = "prisma-client-js"
+  binaryTargets = ["debian-openssl-3.0.x"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           Int             @id @default(autoincrement())
+  email        String          @unique
+  paymentAccount PaymentAccount[]
+  paymentHistory PaymentHistory[]
+}
+ 
+model PaymentAccount {
+  id           Int             @id @default(autoincrement())
+  accountType  String
+  balance      Int
+  userId       Int             
+
+  user         User            @relation(fields: [userId], references: [id])
+  paymentHistory PaymentHistory[]
+}
+
+model PaymentHistory {
+  id              Int            @id @default(autoincrement())
+  accountId       Int
+  amount          Int
+  timestamp       DateTime
+  recipient       String
+  transactionType String
+  userId          Int
+  currency        String
+
+  paymentAccount  PaymentAccount @relation(fields: [accountId], references: [id])
+  user            User           @relation(fields: [userId], references: [id])
+}
