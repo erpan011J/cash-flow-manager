@@ -38,9 +38,13 @@ This is a backend service application for managing user accounts and transaction
     DATABASE_URL=your_database_url
     ANONYMOUS_PUBLIC_KEY=your_supabase_api_key
     ```
-
-    Run Prisma migrations:
-
+    # generate prisma client
+    ```bash
+    cd .\account-manager\
+    prisma generate
+    ```
+    
+    # Run Prisma migrations:
     ```bash
     prisma migrate dev
     ```
