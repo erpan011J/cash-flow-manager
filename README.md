@@ -46,8 +46,6 @@ This is a backend service application for managing user accounts and transaction
     prisma migrate dev
     ```
 
-    Alternatively, you can use my Supabase credentials (this is for the Take-Home Assignment for ConcreteAI, will be removed soon with the supabase project associated with it).
-
 ## Running the Application
 
 ```bash
